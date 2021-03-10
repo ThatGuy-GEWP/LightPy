@@ -5,7 +5,7 @@ pygame.init()
 
 size = [600,600]
 
-
+ 
 Lights = []
 Walls = []
 
@@ -14,18 +14,10 @@ pygame.display.set_caption("LightPy V1")
 
 render = pygame.surface.Surface(size)
 
+Quality = 5
+
 def RenderBrights():
     Brights = CalcBrightSheet(Lights, Walls, size)
-
-    for x in range(0,len(Lights)):
-
-
-
-
-
-
-
-
     for y in range(0,size[1]):
         for x in range(0,size[0]):
             brtFn = (Brights[y][x], Brights[y][x], Brights[y][x])
@@ -35,7 +27,7 @@ def RenderBrights():
 
 
 
-done = FaLightse
+done = False
 clock = pygame.time.Clock()
 WallCords = []
 
