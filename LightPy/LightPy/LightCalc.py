@@ -1,7 +1,5 @@
 from LightPy import *
 
-
-
 # Old One
 # ((255 / (dist(cx,cy,lights[light][0],lights[light][1]) + 0.1)) * lights[light][2])
 
