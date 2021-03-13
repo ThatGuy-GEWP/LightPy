@@ -21,18 +21,15 @@ def dist(point1:tuple, point2:tuple):
 def clamp(value, Min, Max):
     return max(Min, min(value, Max))
 
-
-clamp(0,0,1)
-ccw((0,0),(0,0),(0,0))
-intersect((0,0),(0,0),(0,0),(0,0))
-
-def IntersectAtPoint(Point1:vector2, Point2:vector2, Walls):
+def IntersectAtPoint(Point1:tuple, Point2:tuple, Walls):
     result = False
-    if type(Walls) != list:
-        Walls = [Walls]
     for x in range(0,len(Walls)):
-        result = intersect(Point1.AsTuple(), Point2.AsTuple(), Walls[x].StartPoint.AsTuple(), Walls[x].EndPoint.AsTuple())
+        result = intersect(Point1, Point2, Walls[x].StartPoint, Walls[x].EndPoint)
         if(result == True):
             return result
     return result
     
+
+clamp(0,0,1)
+ccw((0,0),(0,0),(0,0))
+intersect((0,0),(0,0),(0,0),(0,0))

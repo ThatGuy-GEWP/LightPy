@@ -1,17 +1,20 @@
 import pygame, math, threading, numba
+import numpy as np
 from numba import jit
 from LightPy import *
 
-pygame.init()
-
 size = [600,600]
+surf = pygame.surface.Surface((50,50));
+pygame.draw.rect(surf, (155,155,155), ((0,0), (50,50)))
+pygame.display.set_icon(surf)
 
+pygame.init()
  
 Lights = []
 Walls = []
 
 screen = pygame.display.set_mode(size)
-pygame.display.set_caption("LightPy V1")
+pygame.display.set_caption("LightPy V1 - Threading Branch")
 
 render = pygame.surface.Surface(size)
 
@@ -19,6 +22,8 @@ Quality = 5
 
 def RenderBrights():
     Brights = CalcBrightSheet(Lights, Walls, size)
+    Brights = np.array(Brights)
+
     for y in range(0,size[1]):
         for x in range(0,size[0]):
             brtFn = (Brights[y][x], Brights[y][x], Brights[y][x])
@@ -40,16 +45,15 @@ while not done:
     clock.tick()
     # Leave this out and we will use all CPU we can.
 
-
     if len(WallCords) > 0 and len(WallCords) < 2:
         pygame.draw.line(screen, (155,155,255), (WallCords[0][0], WallCords[0][1]), xy)
     elif len(WallCords) == 2:
-        Walls.append(WallObject(vector2(WallCords[0][0], WallCords[0][1]), vector2(WallCords[1][0], WallCords[1][1])))
+        Walls.append([(WallCords[0][0], WallCords[0][1]),(WallCords[1][0], WallCords[1][1])])
         WallCords = []
 
 
     for x in range(0,len(Walls)):
-        pygame.draw.line(screen, (255,255,255), Walls[x].StartPoint.AsTuple(), Walls[x].EndPoint.AsTuple())
+        pygame.draw.line(screen, (255,255,255), Walls[x][0], Walls[x][1])
 
     for x in range(0,len(Lights)):
         pygame.draw.rect(screen, (255,155,255), ((Lights[x].pos.x - 5, Lights[x].pos.y - 5), (15,15)))
