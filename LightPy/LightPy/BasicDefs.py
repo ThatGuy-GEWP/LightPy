@@ -22,6 +22,10 @@ def clamp(value, Min, Max):
     return max(Min, min(value, Max))
 
 
+clamp(0,0,1)
+ccw((0,0),(0,0),(0,0))
+intersect((0,0),(0,0),(0,0),(0,0))
+
 def IntersectAtPoint(Point1:vector2, Point2:vector2, Walls):
     result = False
     if type(Walls) != list:
