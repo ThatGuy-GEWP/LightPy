@@ -21,7 +21,11 @@ render = pygame.surface.Surface(size)
 Quality = 5
 
 def RenderBrights():
-    Brights = CalcBrightSheet(Lights, Walls, size)
+    Ls = np.array(Lights)
+    Ws = np.array(Walls)
+
+
+    Brights = CalcBrightSheet(Ls, Ws, size)
     Brights = np.array(Brights)
 
     for y in range(0,size[1]):

@@ -24,7 +24,7 @@ def clamp(value, Min, Max):
 def IntersectAtPoint(Point1:tuple, Point2:tuple, Walls):
     result = False
     for x in range(0,len(Walls)):
-        result = intersect(Point1, Point2, Walls[x].StartPoint, Walls[x].EndPoint)
+        result = intersect(Point1, Point2, Walls[x][0], Walls[x][1])
         if(result == True):
             return result
     return result
