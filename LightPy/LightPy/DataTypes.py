@@ -1,5 +1,7 @@
 from LightPy import *
 
+#Stuff here is mostly for readability in other scripts.
+
 class vector2():
     def __init__(self, x=0, y=0):
         self.x = x

@@ -2,6 +2,10 @@ import math, numba
 from LightPy.DataTypes import *
 from numba import jit
 
+# BTW, @jit(nopython=True) Converts the function into a numby thing that can run about 10x faster
+#  -Really good for Math heavy operations, when you put it before a function, run the function once to compile
+#  -Does not work for custom classes, especialy when iterating alot with them
+
 # No idea what this one does lmao
 @jit(nopython=True)
 def ccw(A,B,C):
@@ -33,3 +37,4 @@ def IntersectAtPoint(Point1:tuple, Point2:tuple, Walls):
 clamp(0,0,1)
 ccw((0,0),(0,0),(0,0))
 intersect((0,0),(0,0),(0,0),(0,0))
+#Aforementioned "Run to compile" code

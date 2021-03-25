@@ -5,12 +5,12 @@ from numba import jit
 # Old One
 # ((255 / (dist(cx,cy,lights[light][0],lights[light][1]) + 0.1)) * lights[light][2])
 
-
 # Old One as text
 #( (255 / ( dist(CurrentX, CurrentY, LightX, LightY) + 0.001) ) * Brightness)
 
 # New one:
 # ( 255 / ( dist(Point.AsTuple(), Light.pos.AsTuple()) + 0.001) ) * Light.Brightness
+
 @jit(nopython=True)
 def CalcBrightnessFromPoint(Point:tuple, LightPos:tuple, LightBrightness:int):
     return ( 255 / (dist(Point, LightPos) + 0.001)) * LightBrightness
