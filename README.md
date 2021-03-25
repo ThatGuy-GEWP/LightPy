@@ -1,7 +1,10 @@
 # LightPy
 Rewrite of my older python light renderer, to be faster and better organised.
 
-# numba And pygame Required!
+# Required Libs:
+
+    "numpy"
+    "pygame"
 
 
 
@@ -26,7 +29,7 @@ Rewrite of my older python light renderer, to be faster and better organised.
   
     Colored Lights
   
-    Bigger Resoulution
+    Bigger Resoulution Support
   
   
 But yeah, Thats all i got for now.
