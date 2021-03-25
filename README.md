@@ -32,7 +32,7 @@ Rewrite of my older python light renderer, to be faster and better organised.
     Bigger Resoulution Support
   
   
-But yeah, Thats all i got for now.
-if you want, the old LightPy script is included, **be warned, it is _not_ a pretty sight**
+Thats all i got for now.
+if you want to look, the old LightPy script is included, **be warned, it is _not_ a pretty sight**
 
 Special Thanks to you for reading :)
