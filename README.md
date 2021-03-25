@@ -1,6 +1,17 @@
 # LightPy
 Rewrite of my older python light renderer, to be faster and better organised.
 
+# numba And pygame Required!
+
+
+
+
+
+
+
+
+
+
 # Current Features:
     Light rendering, supporting up to 50 lights, not as fast as i would like it to be currently, soon to be threaded
   
@@ -19,6 +30,6 @@ Rewrite of my older python light renderer, to be faster and better organised.
   
   
 But yeah, Thats all i got for now.
-if you want, the old LightPy script is included, be warned it is not a pretty sight.
+if you want, the old LightPy script is included, **be warned, it is _not_ a pretty sight**
 
 Special Thanks to you for reading :)
