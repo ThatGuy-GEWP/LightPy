@@ -1,22 +1,24 @@
 # LightPy
 Rewrite of my older python light renderer, to be faster and better organised.
 
-Current Features:
-  Light rendering, supporting up to 50 lights, not as fast as i would like it to be currently, soon to be threaded
-  Wall Obstruction, Placable Walls that block light rays accurately.
-  Neat and tidy code, mostly commented
+# Current Features:
+    Light rendering, supporting up to 50 lights, not as fast as i would like it to be currently, soon to be threaded
   
-WIP Features:
-  Threading, or well mostly multiprocessing
-  Replacing most math with numpy
-  Colored Lights
-  Bigger Resoulution
+    Wall Obstruction, Placable Walls that block light rays accurately.
+  
+    Neat and tidy code, mostly commented
+  
+# WIP Features:
+    Threading, or well mostly multiprocessing
+  
+    Replacing most math with numpy
+  
+    Colored Lights
+  
+    Bigger Resoulution
   
   
 But yeah, Thats all i got for now.
 if you want, the old LightPy script is included, be warned it is not a pretty sight.
-
-
-
 
 Special Thanks to you for reading :)
