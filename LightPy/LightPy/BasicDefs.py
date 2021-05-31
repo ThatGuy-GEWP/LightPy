@@ -1,4 +1,4 @@
-import math, numba
+import math, numba, numpy
 from LightPy.DataTypes import *
 from numba import jit
 
@@ -27,7 +27,7 @@ def clamp(value, Min, Max):
     return max(Min, min(value, Max))
 
 #Loops through all walls, if they intersect it returns the result
-def IntersectAtPoint(Point1:tuple, Point2:tuple, Walls):
+def IntersectAtPoint(Point1:tuple, Point2:tuple, Walls:numpy.array):
     result = False
     for x in range(0,len(Walls)):
         result = intersect(Point1, Point2, Walls[x][0], Walls[x][1])
